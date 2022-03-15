@@ -1,0 +1,18 @@
+.pokemon-list {
+  width: calc(100% - 20px);
+  height: 100%;
+  margin: 10px;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      margin-left: 20px;
+    }
+  }
+}

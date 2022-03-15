@@ -1,0 +1,28 @@
+.pokemon-search {
+  min-width: 100%;
+  height: 150px;
+  background-color: rgba(156, 103, 68, 0.904);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px rgba(255, 255, 255, 0.658) solid;
+  position: relative;
+
+  h1 {
+    color: white;
+    letter-spacing: 10px;
+    font-family: "Pokemon-Solid", sans-serif;
+  }
+
+  a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}

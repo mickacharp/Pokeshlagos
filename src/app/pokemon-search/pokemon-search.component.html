@@ -1,0 +1,20 @@
+<div class="pokemon-search">
+  <a routerLink="/">Home</a>
+  <h1>POKÉSHLAGOS</h1>
+  <form (ngSubmit)="getPokemonByName(pokemonSearched)">
+    <label for="search-pokemon">Search a Pokémon: </label>
+    <input
+      name="search-pokemon"
+      id="search-pokemon"
+      type="text"
+      [(ngModel)]="pokemonSearched"
+      pInputText
+    />
+    <p-button
+      type="submit"
+      label="Search that Pokémon"
+      icon="pi pi-search"
+      iconPos="right"
+    ></p-button>
+  </form>
+</div>

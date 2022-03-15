@@ -1,0 +1,156 @@
+.pokemon-details {
+  width: 80%;
+  height: 70vh;
+  margin: auto;
+  margin-top: 2%;
+  background-color: rgba(156, 103, 68, 0.904);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  h1 {
+    letter-spacing: 10px;
+    height: 10%;
+  }
+
+  &__sprites-types-stats {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__sprites {
+    display: flex;
+    flex-direction: column;
+    &__default,
+    &__shiny {
+      display: flex;
+    }
+  }
+  &__types {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+  }
+  img {
+    width: 120px;
+  }
+  &__previous-pokemon,
+  &__next-pokemon {
+    cursor: pointer;
+    font-weight: bolder;
+    position: absolute;
+  }
+
+  &__previous-pokemon {
+    left: 15px;
+    bottom: 10px;
+  }
+
+  &__next-pokemon {
+    right: 15px;
+    bottom: 10px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      margin-top: 10px;
+    }
+  }
+
+  &__body-data {
+    position: absolute;
+    bottom: 0;
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+::ng-deep .p-progressbar {
+  width: 400px;
+  height: 25px;
+  border-radius: 20px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset,
+    rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  letter-spacing: 5px;
+}
+
+.normal {
+  background-color: rgb(224, 224, 224);
+}
+
+.fighting {
+  background-color: rgb(149, 87, 45);
+}
+
+.flying {
+  background-color: rgb(162, 241, 241);
+}
+
+.poison {
+  background-color: rgb(172, 74, 167);
+}
+.ground {
+  background-color: rgb(251, 219, 150);
+}
+.rock {
+  background-color: rgb(139, 104, 28);
+}
+.bug {
+  background-color: rgb(159, 207, 119);
+}
+.ghost {
+  background-color: rgb(44, 6, 114);
+  color: white;
+}
+.steel {
+  background-color: rgb(197, 197, 197);
+}
+.fire {
+  background-color: rgb(218, 45, 45);
+}
+.water {
+  background-color: rgb(51, 130, 221);
+}
+.grass {
+  background-color: rgb(47, 153, 33);
+}
+.electric {
+  background-color: rgb(255, 191, 15);
+}
+.psychic {
+  background-color: rgb(233, 144, 248);
+}
+.ice {
+  background-color: rgb(25, 238, 238);
+}
+.dragon {
+  background-color: rgb(82, 59, 187);
+  color: white;
+}
+.dark {
+  background-color: rgb(40, 53, 53);
+  color: white;
+}
+.fairy {
+  background-color: rgb(246, 198, 255);
+}

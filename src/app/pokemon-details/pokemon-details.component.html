@@ -1,0 +1,119 @@
+<ng-container *ngIf="currentPokemon">
+  <div class="pokemon-details">
+    <!-- ng-container allows to create a virtual container instead of a div that will be load into the DOM uselessly-->
+    <h1>{{ currentPokemon.name | uppercase }}</h1>
+
+    <div class="pokemon-details__sprites-types-stats">
+      <div class="pokemon-details__sprites-types">
+        <div class="pokemon-details__sprites">
+          <div class="pokemon-details__sprites__default">
+            <img src="{{ currentPokemon.sprites.back_default }}" alt="" />
+            <img src="{{ currentPokemon.sprites.front_default }}" alt="" />
+          </div>
+          <div class="pokemon-details__sprites__shiny">
+            <img src="{{ currentPokemon.sprites.back_shiny }}" alt="" />
+            <img src="{{ currentPokemon.sprites.front_shiny }}" alt="" />
+          </div>
+        </div>
+        <div
+          *ngFor="let type of currentPokemon.types"
+          class="pokemon-details__types"
+        >
+          <button
+            ngClass="{{ type.type.name }}"
+            class="p-button-raised p-button-rounded"
+          >
+            {{ type.type.name | uppercase }}
+          </button>
+        </div>
+      </div>
+      <div class="pokemon-details__stats">
+        <span
+          >{{ currentPokemon.stats[0].stat.name | uppercase }}:
+          {{ currentPokemon.stats[0].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[0].base_stat * 100) / 250 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+        <span
+          >{{ currentPokemon.stats[1].stat.name | uppercase }}:
+          {{ currentPokemon.stats[1].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[1].base_stat * 100) / 134 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+        <span
+          >{{ currentPokemon.stats[2].stat.name | uppercase }}:
+          {{ currentPokemon.stats[2].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[2].base_stat * 100) / 180 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+        <span
+          >{{ currentPokemon.stats[3].stat.name | uppercase }}:
+          {{ currentPokemon.stats[3].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[3].base_stat * 100) / 154 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+        <span
+          >{{ currentPokemon.stats[4].stat.name | uppercase }}:
+          {{ currentPokemon.stats[4].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[4].base_stat * 100) / 125 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+        <span
+          >{{ currentPokemon.stats[5].stat.name | uppercase }}:
+          {{ currentPokemon.stats[5].base_stat }}</span
+        >
+        <p-progressBar
+          [showValue]="false"
+          unit=""
+          value="{{
+            (currentPokemon.stats[5].base_stat * 100) / 150 | number: '1.0-0'
+          }}"
+        ></p-progressBar>
+      </div>
+    </div>
+    <div class="pokemon-details__body-data">
+      <p>Height: {{ currentPokemon.height * 10 }} cm</p>
+      <p>Weight: {{ currentPokemon.weight }} kg</p>
+    </div>
+    <a class="pokemon-details__previous-pokemon" (click)="previousPokemon()"
+      >Previous Pokémon
+    </a>
+    <a class="pokemon-details__next-pokemon" (click)="nextPokemon()"
+      >Next Pokémon</a
+    >
+  </div>
+</ng-container>
+
+<!-- <div *ngFor="let stat of currentPokemon.stats">
+    <span>{{ stat.stat.name | uppercase }}: {{ stat.base_stat }}</span>
+
+    <p-progressBar
+      unit=""
+      value="{{ (stat.base_stat * 100) / 150 }}"
+    ></p-progressBar>
+  </div> -->

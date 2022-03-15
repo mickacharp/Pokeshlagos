@@ -1,0 +1,10 @@
+<div class="pokemon-list">
+  <ul>
+    <a
+      *ngFor="let pokemon of pokemons.results"
+      routerLink="/pokemon/{{ pokemon.url.slice(34, -1) }}"
+    >
+      <li>{{ pokemon.name | titlecase }}</li>
+    </a>
+  </ul>
+</div>
